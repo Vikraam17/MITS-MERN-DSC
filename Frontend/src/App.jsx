@@ -11,10 +11,13 @@ import Services from "./pages/Services";
 import Login from "./auth/Login";
 import Signup from "./auth/Signup";
 import {Routes,Route}  from 'react-router-dom'
+import Ref from "./hooks/Ref";
+import Reducer from "./hooks/Reducer";
 const App = () => {
   return (
     <>
       <Navbar/>
+      
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/about" element={<About/>}></Route>
@@ -28,6 +31,8 @@ const App = () => {
           <Route path="form" element={<Form/>}/>
           <Route path="useEffect" element={<Effect/>}/>
           <Route path="useEffectApi" element={<EffectWithApi/>}/>
+          <Route path="useRef" element={<Ref/>}/>
+          <Route path="useReducer" element={<Reducer/>}/>
         </Route>
       </Routes>
     </>
