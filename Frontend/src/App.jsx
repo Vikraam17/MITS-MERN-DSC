@@ -13,6 +13,9 @@ import Signup from "./auth/Signup";
 import {Routes,Route}  from 'react-router-dom'
 import Ref from "./hooks/Ref";
 import Reducer from "./hooks/Reducer";
+import Memo from "./hooks/Memo";
+import Callback from "./hooks/Callback";
+import Todo from "./components/Todo";
 const App = () => {
   return (
     <>
@@ -23,6 +26,7 @@ const App = () => {
         <Route path="/about" element={<About/>}></Route>
         <Route path="/contact" element={<Contact/>}/>
         <Route path="/service" element={<Services/>}/> {/* Class Component */}
+        <Route path="/todo" element={<Todo/>}/>
         <Route path="/login" element={<Login/>}/>
         <Route path="/signup" element={<Signup/>}/>
         {/* Nested Route */}
@@ -33,6 +37,8 @@ const App = () => {
           <Route path="useEffectApi" element={<EffectWithApi/>}/>
           <Route path="useRef" element={<Ref/>}/>
           <Route path="useReducer" element={<Reducer/>}/>
+          <Route path="useMemo" element={<Memo/>}/>
+          <Route path="useCallback" element={<Callback/>}/>
         </Route>
       </Routes>
     </>
